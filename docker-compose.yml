@@ -1,0 +1,19 @@
+version: '3'
+services:
+  # Uses student service build with command example: docker build --tag devops-lab1/student_service .
+  # It also runs mongodb as a separate image
+  student_service:
+    image: nginx
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+    ports:
+      - "8080:8080"
+
+  mongo:
+    restart: unless-stopped
+    image: mongo:4
+    ports:
+      - "27017:27017"
