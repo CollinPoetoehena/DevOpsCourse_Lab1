@@ -2,7 +2,7 @@ name: Build Test and push
 on: [push]
 env:
   IMAGE_NAME: student_service
-  REPO_NAME: devops-lab1
+  REPO_NAME: docker.io/devops-lab1
 
 
 jobs:
