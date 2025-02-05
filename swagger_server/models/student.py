@@ -14,7 +14,8 @@ class Student(Model):
 
     Do not edit the class manually.
     """
-    def __init__(self, student_id: int=None, first_name: str=None, last_name: str=None, grade_records: List[Object]=None):  # noqa: E501
+
+    def __init__(self, student_id: int = None, first_name: str = None, last_name: str = None, grade_records: List[object] = None):  # noqa: E501
         """Student - a model defined in Swagger
 
         :param student_id: The student_id of this Student.  # noqa: E501
@@ -24,13 +25,13 @@ class Student(Model):
         :param last_name: The last_name of this Student.  # noqa: E501
         :type last_name: str
         :param grade_records: The grade_records of this Student.  # noqa: E501
-        :type grade_records: List[Object]
+        :type grade_records: List[object]
         """
         self.swagger_types = {
             'student_id': int,
             'first_name': str,
             'last_name': str,
-            'grade_records': List[Object]
+            'grade_records': List[object]
         }
 
         self.attribute_map = {
@@ -119,22 +120,22 @@ class Student(Model):
         self._last_name = last_name
 
     @property
-    def grade_records(self) -> List[Object]:
+    def grade_records(self) -> List[object]:
         """Gets the grade_records of this Student.
 
 
         :return: The grade_records of this Student.
-        :rtype: List[Object]
+        :rtype: List[object]
         """
         return self._grade_records
 
     @grade_records.setter
-    def grade_records(self, grade_records: List[Object]):
+    def grade_records(self, grade_records: List[object]):
         """Sets the grade_records of this Student.
 
 
         :param grade_records: The grade_records of this Student.
-        :type grade_records: List[Object]
+        :type grade_records: List[object]
         """
 
         self._grade_records = grade_records
