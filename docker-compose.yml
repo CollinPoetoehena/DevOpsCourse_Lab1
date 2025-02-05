@@ -1,9 +1,9 @@
+# Run with: docker-compose up --build
 version: '3'
 services:
-  # Uses student service build with command example: docker build --tag devops-lab1/student_service .
-  # It also runs mongodb as a separate image
   student_service:
-    image: nginx
+    # This uses the Dockerfile to build the image in the current directory (.)
+    build: .
     restart: unless-stopped
     depends_on:
       - mongo
@@ -11,7 +11,8 @@ services:
       MONGO_URI: mongodb://mongo:27017
     ports:
       - "8080:8080"
-
+  
+  # Also run mongodb as a separate service using the image mongo:4
   mongo:
     restart: unless-stopped
     image: mongo:4
