@@ -119,9 +119,9 @@ components:
         last_name: Doe
         grade_records:
         - grade: 8.5
-          subject_name: Mathematics
+          subject_name: DevOps
         - grade: 8.5
-          subject_name: Mathematics
+          subject_name: DevOps
         first_name: John
     GradeRecord:
       required:
@@ -131,16 +131,16 @@ components:
       properties:
         subject_name:
           type: string
-          example: Mathematics
+          example: DevOps
         grade:
           maximum: 10
-          minimum: 0
+          minimum: 1
           type: number
           format: float
           example: 8.5
       example:
         grade: 8.5
-        subject_name: Mathematics
+        subject_name: DevOps
     inline_response_200:
       type: object
       properties:
