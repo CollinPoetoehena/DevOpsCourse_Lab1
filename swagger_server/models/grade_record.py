@@ -63,6 +63,8 @@ class GradeRecord(Model):
         :param subject_name: The subject_name of this GradeRecord.
         :type subject_name: str
         """
+        if subject_name is None:
+            raise ValueError("Invalid value for `subject_name`, must not be `None`")  # noqa: E501
 
         self._subject_name = subject_name
 
@@ -84,5 +86,7 @@ class GradeRecord(Model):
         :param grade: The grade of this GradeRecord.
         :type grade: float
         """
+        if grade is None:
+            raise ValueError("Invalid value for `grade`, must not be `None`")  # noqa: E501
 
         self._grade = grade
